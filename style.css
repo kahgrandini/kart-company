@@ -168,13 +168,12 @@ nav ul li a.active {
     color: #f8f8f8; /* Change text color on hover */
     transform: scale(1.09); /* Slightly enlarge the button on hover */
 }
-
 .gallery {
    display: grid;
    grid-template-columns: 40% 60%;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: auto;
     height: 380px;
     overflow: hidden;
     

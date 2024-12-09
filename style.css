@@ -1,0 +1,323 @@
+/* Global Styles */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /* Ensure consistent box sizing */
+}
+
+html, body {
+    height: 100%; 
+    width: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/racing-3415413_1920.jpg');
+    background-size: cover;  /* Ensure the image covers the entire viewport */
+    background-position: center center;  /* Center the image */
+    background-repeat: no-repeat;  /* Prevent tiling of the image */
+    background-attachment: fixed; /* Optional: Keeps the background fixed during scrolling */
+}
+body::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(141, 134, 156, 0.975); /* Color of the scroll thumb */
+    border-radius: 10px; /* Round the edges of the scroll thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(206, 106, 240, 0.968); /* Color of the scroll thumb on hover */
+}
+
+body::-webkit-scrollbar-track {
+    background: #090909; /* Color of the scroll track (background) */
+    border-radius: 10px; /* Optional: round the edges of the track */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: #090909; /* Dark background color */
+    padding: 10px 20px;
+    position: sticky; /* Stick to the top on scroll */
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
+}
+
+header .logo img {
+    width: 120px; /* Adjust the logo size */
+}
+
+nav ul {
+    display: flex;
+    list-style: none; /* Remove default list styling */
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Add spacing between menu items */
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #ffffff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size */
+    font-family: Arial, sans-serif; /* Use a clean font */
+    padding: 10px 15px; /* Add padding for clickable area */
+    border-radius: 5px; /* Slightly round corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+}
+
+nav ul li a:hover {
+    background-color: rgba(206, 106, 240, 0.968); /* Light purple hover effect */
+    color: #f8f8f8; /* Slightly lighter text on hover */
+}
+
+nav ul li a.active {
+    background-color: rgba(104, 66, 209, 0.975); /* Highlight for active menu item */
+    color: #ffffff;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        background-color: #090909; /* Keep consistent background */
+        width: 100%; /* Full width */
+        position: absolute; /* Place below the header */
+        top: 60px; /* Adjust to be below the logo */
+        left: 0;
+        display: none; /* Hidden by default */
+    }
+
+    nav ul.show {
+        display: flex; /* Show when toggled */
+    }
+
+    nav ul li {
+        text-align: center; /* Center text for vertical layout */
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+}
+
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(2, 2, 2, 0.7); /* Semi-transparent dark background */
+    color: aliceblue;
+    font-size: 22px;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 20px;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 20px;
+}
+.btn-welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    width: 280px;
+    height: 60px;
+    font-weight: bold;
+    background-color: rgba(104, 66, 209, 0.975);
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 10px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-welcome:hover {
+    background-color: rgba(206, 106, 240, 0.968); /* Lighten background on hover */
+    color: #f8f8f8; /* Change text color on hover */
+    transform: scale(1.09); /* Slightly enlarge the button on hover */
+}
+
+.gallery {
+   display: grid;
+   grid-template-columns: 40% 60%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    
+}
+.album-container {
+    display: flex; /* Flexbox for horizontal alignment of albums */
+    align-items: center; /* Align items vertically in the container */
+    width: 100%; /* Full-width container */
+    position: relative; /* Ensure albums are positioned correctly */
+    overflow: hidden; /* Ensure no content overflows */
+}
+
+.album {
+    position: relative; /* To position images inside each album */
+    flex: 1; /* Allow albums to take equal space */
+    height: 400px; /* Set a fixed height for consistency */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.kart-pic {
+    width: 100%; /* Images fill the width of the album */
+    height: 100%; /* Images fill the height of the album */
+    position: absolute; /* Stack all images on top of each other */
+    opacity: 0; /* Hide all images by default */
+    object-fit: cover; /* Maintain aspect ratio while filling the container */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
+}
+
+.kart-pic.active {
+    opacity: 1; /* Show the active image */
+    z-index: 1; /* Bring the active image to the front */
+}
+
+.kart-pic img {
+    width: 100%; /* Make the image fill the width of its container */
+    height: 100%; /* Ensure it fills the height */
+    object-fit: cover; /* Scale the image proportionally, cropping if necessary */
+}
+
+.about {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    align-items:center;
+    justify-content:center;
+    background-color: rgba(28, 27, 27, 0.764); 
+    color: aliceblue;
+    font-size: 22px;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-left: 80px;
+    padding-top: 80px;
+    
+}
+
+.about-text{
+    display: flex;
+    width: 70%;
+    height: 100%;
+    align-items:flex-start;
+    justify-content:center;
+    color: aliceblue;
+    font-size: 22px;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(2, 2, 2, 0.7); /* Semi-transparent dark background */
+    width: 100%;
+    height: 300px;
+    color: #ecf0f1;
+    font-size: 30px;
+    font-family: "Times New Roman", Times, serif;
+    border-radius: 20px;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 20px;
+}
+.icons-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 18px;
+}
+
+.icons-contact i {
+    font-size: 5rem; /* Adjust icon size */
+    color: #ffffff;  /* Set icon color */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for icons */
+.icons-contact i:hover {
+    color: #12b7f3;  /* Change color when hovered */
+    transform: scale(1.5);  /* Make icon slightly larger when hovered */
+}
+
+/* Add margin between icons */
+.socialIcons {
+    display: flex;
+    gap: 80px;  /* Add spacing between icons */
+}
+
+/* Make the icons even larger in the contact section */
+#contact .socialIcons i {
+    font-size: 4rem;  /* Override to make icons larger */
+}
+
+/* Change icon color in a dark background section */
+#contact .icons-contact a:hover i {
+    color: #ecf0f1;  /* Light color on hover */
+}
+
+/* Optionally, add a background circle behind the icons */
+.icons-contact a {
+    display: inline-block;
+    color: inherit;
+    border-radius: 50%; /* Circular background */
+    padding: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+/* Increase size for smaller screens (responsive design) */
+@media screen and (max-width: 768px) {
+    .icons-contact i {
+        font-size: 2rem;  /* Smaller size on smaller screens */
+    }
+}
+
+
+footer {
+    background-color: #010101;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+

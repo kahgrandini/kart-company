@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our services</title>
+    <script src="/index.html"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/logo-kart.svg" alt="Kart Racing Company Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html#us">About us</a></li>
+                <li><a href="/index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="main-content">
+        <h1>Our services</h1>
+        <h3>We have a very experienced team to provide a variety of services.</h3>
+        <div class="box">
+            <div class="services">
+                <p>Mechanical Kart Services</p>
+                <p>Arrive and Drive Karting</p>
+                <p>Track Side Support and Hospitality</p>
+                <p>Driver Coaching and Development</p>
+                <p>Kart Mechanic Instructional Classes</p>
+                <p>Kart Storage</p>
+                <p>Equipment Transportation</p>
+                <p>Data Analysis</p>
+                <p>Engine Services</p>
+                <p>Chassis Table Services</p>
+                <p>Fabrication</p>
+            </div>       
+        </div>
+    </div>
+</body>
+
+    <style>
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /* Ensure consistent box sizing */
+}
+
+html, body {
+    height: 100%; 
+    width: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #090909; /* Dark background color */
+    position: sticky; /* Stick to the top on scroll */
+    top: 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
+    width: 100%;
+    padding-left: 30px;
+}
+
+header .logo img {
+    width: 120px; /* Adjust the logo size */
+}
+body::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(141, 134, 156, 0.975); /* Color of the scroll thumb */
+    border-radius: 10px; /* Round the edges of the scroll thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(206, 106, 240, 0.968); /* Color of the scroll thumb on hover */
+}
+
+body::-webkit-scrollbar-track {
+    background: #090909; /* Color of the scroll track (background) */
+    border-radius: 10px; /* Optional: round the edges of the track */
+}
+
+nav ul {
+    display: flex;
+    list-style: none; /* Remove default list styling */
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Add spacing between menu items */
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #ffffff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size */
+    font-family: Arial, sans-serif; /* Use a clean font */
+    padding: 10px 15px; /* Add padding for clickable area */
+    border-radius: 5px; /* Slightly round corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+}
+
+nav ul li a:hover {
+    background-color: rgba(206, 106, 240, 0.968); /* Light purple hover effect */
+    color: #f8f8f8; /* Slightly lighter text on hover */
+}
+
+nav ul li a.active {
+    background-color: rgba(104, 66, 209, 0.975); /* Highlight for active menu item */
+    color: #ffffff;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        background-color: #090909; /* Keep consistent background */
+        width: 100%; /* Full width */
+        position: absolute; /* Place below the header */
+        top: 60px; /* Adjust to be below the logo */
+        left: 0;
+        display: none; /* Hidden by default */
+    }
+
+    nav ul.show {
+        display: flex; /* Show when toggled */
+    }
+
+    nav ul li {
+        text-align: center; /* Center text for vertical layout */
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+}
+.menu-toggle {
+    display: none;
+}
+body {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+        url('/racing-3415413_1920.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0 20px; /* Add padding for responsiveness */
+}
+.services{
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+       height: 100%;
+    }
+        
+        p {
+    color: white;
+    font-size: 20px;
+    margin: 10px 0; /* Add spacing between paragraphs */
+    padding-bottom: 10px; /* Space between text and the line */
+    border-bottom: 1px solid white; /* Add a white line below each <p> */
+    width: 80%; /* Make the line longer by adjusting the paragraph's width */
+    align-self: center; /* Center-align the paragraph */
+    text-align: center; /* Center-align the text within the paragraph */
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.services p:last-child {
+    border-bottom: none; /* Remove the line under the last <p> */
+}
+
+
+.box {
+    display: flex;
+    width: 600px;
+    height: auto;
+    background-color: #090909;
+    border: none;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+h1 {
+    display: flex;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: center; /* Center-align the text */
+    margin-top: 50px; /* Add spacing from the top */
+    margin-bottom: 20px; /* Space between h1 and h3 */
+}
+
+h3 {
+    display: flex;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    text-align: center; /* Center-align the text */
+    margin-bottom: 30px; /* Add spacing before the box */
+}
+
+
+
+    </style>
+</head>
+<body>
+</html>

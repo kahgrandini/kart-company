@@ -27,3 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Start the carousel for the album
     startCarousel("album1");
 });
+
+function toggleMenu() {
+    const nav = document.querySelector('nav ul');
+    nav.classList.toggle('show');
+}

@@ -12,6 +12,9 @@
         <div class="logo">
             <img src="./logo-kart.svg" alt="Kart Racing Company Logo">
         </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i> <!-- Hamburger menu icon -->
+        </div>
         <nav>
             <ul>
                 <li><a href="./index.html#aboutus">About us</a></li>
@@ -94,7 +97,7 @@ body::-webkit-scrollbar-track {
     border-radius: 10px; /* Optional: round the edges of the track */
 }
 
-nav ul {
+ nav ul {
     display: flex;
     list-style: none; /* Remove default list styling */
     margin: 0;
@@ -127,6 +130,13 @@ nav ul li a.active {
     color: #ffffff;
 }
 
+.menu-toggle {
+        display: block;
+        font-size: 24px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
 /* Responsive Navigation */
 @media screen and (max-width: 768px) {
     nav ul {
@@ -146,16 +156,12 @@ nav ul li a.active {
     nav ul li {
         text-align: center; /* Center text for vertical layout */
     }
-
-    .menu-toggle {
-        display: block;
-        font-size: 24px;
-        color: #ffffff;
-        cursor: pointer;
-    }
 }
 .menu-toggle {
-    display: none;
+    display: block;
+    nav ul.show {
+        display: flex; /* Show when toggled */
+    }
 }
 body {
     display: flex;

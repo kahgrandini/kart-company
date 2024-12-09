@@ -91,6 +91,10 @@ nav ul li a.active {
 
 /* Responsive Navigation */
 @media screen and (max-width: 768px) {
+
+    .menu-toggle {
+        display: block; /* Show toggle button */
+    }
     nav ul {
         flex-direction: column; /* Stack menu items vertically */
         background-color: #090909; /* Keep consistent background */
@@ -114,6 +118,9 @@ nav ul li a.active {
         font-size: 24px;
         color: #ffffff;
         cursor: pointer;
+    }
+    nav ul.show {
+        display: flex; /* Show when toggled */
     }
 }
 

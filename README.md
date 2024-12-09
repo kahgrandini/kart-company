@@ -3,16 +3,6 @@ created by: Karina Grandini
 
 Kart-company is a website for a company located in sonoma valley.
 
-Here's a walkthrough of implemented features:
-
-
-
-GIF created with LiceCap
-
-another visualization through Giphy:
-
-
-another visualization live mode from github:
 
 License
 Copyright [2025] [Karina Grandini]

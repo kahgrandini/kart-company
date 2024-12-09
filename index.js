@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     function startCarousel(albumId) {
         const kartPics = document.querySelectorAll(`#${albumId} .kart-pic`);
         let currentIndex = 0;
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         kartPics[currentIndex].classList.add('active');
 
         // Create a unique interval for each carousel
-        setInterval(function() {
+        setInterval(function () {
             // Hide the current image
             kartPics[currentIndex].classList.remove('active');
 
@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 2000); // Change image every 2 seconds
     }
 
-    // Start the carousel for both albums
+    // Start the carousel for the album
     startCarousel("album1");
-    startCarousel("album2");
 });

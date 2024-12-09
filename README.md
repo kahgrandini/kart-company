@@ -3,6 +3,9 @@ created by: Karina Grandini
 
 Kart-company is a website for a company located in sonoma valley.
 
+Live link:
+ https://kahgrandini.github.io/kart-company/
+
 
 License
 Copyright [2025] [Karina Grandini]

@@ -72,6 +72,77 @@ body {
     width: auto;
     min-height: 100vh;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #090909; /* Consistent background */
+    padding: 10px 20px; /* Add uniform padding */
+    position: sticky; /* Stick to top */
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Add depth */
+}
+
+header .logo img {
+    width: 120px; /* Ensure consistent logo size */
+}
+
+nav ul {
+    display: flex;
+    gap: 20px; /* Space between menu items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white; /* Consistent link color */
+    text-decoration: none; /* No underline */
+    font-size: 18px; /* Consistent font size */
+    padding: 10px 15px; /* Add padding for clickable area */
+    border-radius: 5px; /* Rounded edges */
+    transition: background-color 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    nav ul li a {
+        font-size: 16px; /* Smaller font for mobile */
+    }
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+    font-size: 24px; /* Adjust icon size */
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show toggle button on smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        position: absolute; /* Place it relative to header */
+        top: 60px; /* Adjust below the header */
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: #090909; /* Consistent background */
+        display: none; /* Hidden by default */
+    }
+
+    nav ul.show {
+        display: flex; /* Show when toggle is active */
+    }
+}
+
 .services{
      display: flex;
      flex-direction: column;

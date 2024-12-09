@@ -52,19 +52,12 @@
     box-sizing: border-box; /* Ensure consistent box sizing */
 }
 
-html, body {
-    height: 100%; 
-    width: 100%;
-    margin: 0;
-    scroll-behavior: smooth;
-
-}
 .main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width:auto;
 }
 body::-webkit-scrollbar {
     width: 12px; /* Set the width of the scrollbar */
@@ -160,6 +153,7 @@ body {
     url("./background2.jpg");
     background-size: cover;
     background-attachment: fixed;
+    width: auto;
     min-height: 100vh;
 }
 .services{

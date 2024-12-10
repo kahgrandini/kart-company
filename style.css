@@ -102,6 +102,7 @@ nav ul li a.active {
         position: absolute; /* Place below the header */
         top: 60px; /* Adjust to be below the logo */
         left: 0;
+        padding-right: 30px;
         display: none; /* Hidden by default */
     }
 
@@ -193,12 +194,6 @@ nav ul li a.active {
     flex: 1; /* Allow albums to take equal space */
     height: 400px; /* Set a fixed height for consistency */
     overflow: hidden; /* Prevent content overflow */
-}
-@media screen {
-   .album-container{
-        width: auto;
-    }
-    
 }
 
 .kart-pic {

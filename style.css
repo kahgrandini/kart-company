@@ -178,12 +178,14 @@ nav ul li a.active {
     overflow: hidden;
     
 }
+@media screen and (max-width: 768px) {
 .album-container {
     display: flex; /* Flexbox for horizontal alignment of albums */
     align-items: center; /* Align items vertically in the container */
     width: 100%; /* Full-width container */
     position: relative; /* Ensure albums are positioned correctly */
     overflow: hidden; /* Ensure no content overflows */
+}
 }
 
 .album {

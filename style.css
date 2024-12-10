@@ -195,7 +195,7 @@ nav ul li a.active {
     overflow: hidden; /* Prevent content overflow */
 }
 @media screen {
-    .kart-pic{
+   .album-container{
         width: auto;
     }
     

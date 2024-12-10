@@ -102,7 +102,6 @@ nav ul li a.active {
         position: absolute; /* Place below the header */
         top: 60px; /* Adjust to be below the logo */
         left: 0;
-        padding-right: 30px;
         display: none; /* Hidden by default */
     }
 
@@ -119,6 +118,7 @@ nav ul li a.active {
         font-size: 24px;
         color: #ffffff;
         cursor: pointer;
+        padding-right: 30px;
     }
     nav ul.show {
         display: flex; /* Show when toggled */

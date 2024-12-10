@@ -194,6 +194,12 @@ nav ul li a.active {
     height: 400px; /* Set a fixed height for consistency */
     overflow: hidden; /* Prevent content overflow */
 }
+@media screen {
+    .album{
+        width: auto;
+    }
+    
+}
 
 .kart-pic {
     width: 100%; /* Images fill the width of the album */
